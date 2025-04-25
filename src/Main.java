@@ -11,6 +11,29 @@ public class Main {
                 2.Paypal
                 3.Credit card
                 4.Exit
-                """);
+        """);
+        int choice  = sc.nextInt();
+        switch (choice) {
+            case 1:{
+                System.out.println("Your payment system is a Bitcoin payment system");
+                break;
+            }
+            case 2:{
+                System.out.println("Your payment system is a Paypal payment system");
+               break;
+            }
+            case 3:{
+                System.out.println("Your payment system is a Credit card payment system");
+                break;
+            }
+            case 4:{
+                System.out.println("Thank you for using our Payment System");
+                break;
+            }
+            default:
+                System.out.println("Invalid choice");
+        }
+
+
     }
 }
