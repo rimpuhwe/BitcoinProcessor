@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CreditCard {
     private final int id;
     CreditCard(Scanner card){
-        System.out.print("Provide the credit card number");
+        System.out.print("Provide the credit card number: ");
         this.id = card.nextInt();
     }
 

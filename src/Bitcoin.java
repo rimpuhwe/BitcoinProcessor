@@ -8,6 +8,6 @@ public class Bitcoin {
 
     @Override
     public String toString() {
-        return "you paid "+ amount +"BTC";
+        return "you paid "+ amount +" BTC";
     }
 }
