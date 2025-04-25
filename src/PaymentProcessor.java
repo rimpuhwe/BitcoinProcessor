@@ -1,22 +1,34 @@
-public class PaymentProcessor<T> {
-     void processPayment(Bitcoin coin) {
-         coin = new Bitcoin();
-         System.out.println(coin);
-
+public class PaymentProcessor {
+    void processPayment(Bitcoin coin) throws InterruptedException {
+        System.out.println("Processing Bitcoin payment...");
+        Thread.sleep(1000);
+        System.out.println(coin);
     }
-    void processPayment(PayPal payPal) {
-         payPal = new PayPal();
-         System.out.println(payPal);
 
+    void processPayment(PayPal payPal) throws InterruptedException {
+        System.out.println("Processing PayPal payment...");
+        Thread.sleep(1000);
+        System.out.println(payPal);
     }
-    void ProcessPayment(CreditCard creditCard) {
-         creditCard = new CreditCard();
+
+    void processPayment(CreditCard creditCard)  {
+        System.out.println("Processing Credit Card payment...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println(creditCard);
-
-    }
-    void ProcessPayment(MomoPay momoPay) {
-         momoPay = new MomoPay();
-         System.out.println(momoPay);
     }
 
+    void processPayment(MomoPay momoPay) {
+        System.out.println("Processing Mobile Money (MomoPay) payment...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(momoPay);
+    }
 }
+

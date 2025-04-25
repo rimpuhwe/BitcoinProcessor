@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 public class MomoPay {
     private  final int phoneNumber ;
-    MomoPay(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    MomoPay(Scanner phone) {
+        System.out.print("Enter Phone Number");
+        this.phoneNumber = phone.nextInt();
     }
 
     @Override
